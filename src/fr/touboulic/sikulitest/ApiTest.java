@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.sikuli.basics.proxies.OCR;
 import org.sikuli.script.*;
-import org.sikuli.script.natives.OCRText;
+//import org.sikuli.script.natives.OCRText;
 import org.sikuli.basics.Settings;
 
 public class ApiTest {
