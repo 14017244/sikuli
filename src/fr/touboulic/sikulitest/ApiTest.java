@@ -10,7 +10,7 @@ import org.sikuli.basics.Settings;
 
 public class ApiTest {
 	   
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Settings.OcrTextSearch = true;
 		Settings.OcrTextRead = true;
 		Region myReg = Region.create(0,0, 1366, 768);
@@ -25,14 +25,18 @@ public class ApiTest {
         	//ImagePath.setBundlePath("path to your image folder");
 
 			s.click("images/1412438211654.png", 0);
+			Thread.sleep(4000);
 	        s.wait("images/1412438261906.png");
 	        s.click("images/firefox.png", 0);
+			Thread.sleep(4000);
 	        s.paste("http://people.rennes.inria.fr/Benoit.Baudry/");
 	        s.type(Key.ENTER);
 	        s.hover("images/1412438425604.png");
 	        s.click("images/softwareTesting.png");
+			Thread.sleep(4000);
 	        s.wait("images/barreNavFirefox.png");
 	        s.click("images/barreNavFirefox.png");
+			Thread.sleep(4000);
 	        s.wait("images/waitfirefoxhiglight.png");
 	        s.paste("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_checkbox");
 	        s.type(Key.ENTER);
@@ -41,6 +45,7 @@ public class ApiTest {
 	        Iterator<Match> matches = s.findAll("images/checkbox.png");
 	        for (; matches.hasNext();matches.next()) {
 	        	s.click("images/checkbox.png");
+				Thread.sleep(4000);
 	        }
 	        
 	        Iterator<Match> car = s.findAll("car");
@@ -58,6 +63,7 @@ public class ApiTest {
 	        System.out.println(myReg.text());
 
 	       s.click("Submit");
+	       
 	        
 		} catch (FindFailed e) {
 			// TODO Auto-generated catch block
