@@ -3,7 +3,7 @@ package fr.touboulic.sikulitest;
 import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
-import org.watij.webspec.dsl.WebSpec;
+//import org.watij.webspec.dsl.WebSpec;
 
 
 public class hightlevel {
